@@ -2,6 +2,8 @@
 const express = require("express");
 const app = express();
 
+
+
 //Create a Courses object
 const courses = [
   { id: 1, name: "HTML" },
