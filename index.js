@@ -42,6 +42,13 @@ app.post('/api/courses', (req, res)=>{
     courses.push(course)// Add the new course to the list of courses
     res.send(course) //sends the newly created course as response
 
+});
+
+//using PUT
+
+app.put('/api/courses/:id', (req, res)=>{
+    const course  = courses.find(c => c.id === parseInt(req.params.id));
+    if(!course) res.status(400).send("course with that id not found")
 })
 
 /*To call endpoints using postman 
